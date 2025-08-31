@@ -2,21 +2,8 @@ import { Box, Container, Link, Stack, Typography } from '@mui/material';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 
 import Header from '../components/Header';
-// import { ExpEntry } from '../components/ExpEntry';
-// import { ProjectEntry } from '../components/ProjectEntry';
 
-// import headshot from "../resources/Elliott_Alex.png";
-// import engine1 from "../resources/engine1.png";
-// import engine2 from "../resources/engine2.gif";
-// import robocan1 from "../resources/robocan1.JPG";
-// import robocan2 from "../resources/robocan2.png";
-// import sunnyview1 from "../resources/sunnyview1.png";
-// import sunnyview2 from "../resources/sunnyview2.png";
-// import sunnyview3 from "../resources/sunnyview3.png";
-// import magna from "../resources/magna.webp";
-// import amegroup from "../resources/amegroup.png";
-// import lra3d from "../resources/lrad3d.png";
-import { aboutMe, experience, projects } from '../text';
+import { aboutMe } from '../text';
 
 export function MobileLayout({sections}) {
   const ContentSection = ({ id, title, children, border }) => (

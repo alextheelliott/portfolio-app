@@ -15,39 +15,30 @@ export default function AnchorNavigation({ sections }) {
       sectionRefs.current[section.id] = document.getElementById(section.id);
     });
   }, [sections]);
-
-  /**
-   * Handles the scroll event to determine which section is currently in the viewport.
-   * It iterates backwards from the last section to find the first one whose top
-   * is above the scroll position (with an offset for better UX).
-   */
-  const handleScroll = () => {
-    // Add a vertical offset to trigger the active state slightly before the section top hits the screen top
-    const scrollPosition = window.scrollY + 110;
-
-    // Find the current section
-    let currentSectionId = '';
-    for (let i = sections.length - 1; i >= 0; i--) {
-      const section = sections[i];
-      const element = sectionRefs.current[section.id];
-      if (element && element.offsetTop <= scrollPosition) {
-        currentSectionId = section.id;
-        break;
-      }
-    }
-    
-    if (currentSectionId && currentSectionId !== activeSection) {
-        setActiveSection(currentSectionId);
-    }
-  };
-
+  
   useEffect(() => {
-    // Add scroll event listener on mount
-    window.addEventListener('scroll', handleScroll);
-    // Clean up the event listener on unmount
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      // Add a vertical offset to trigger the active state slightly before the section top hits the screen top
+      const scrollPosition = window.scrollY + 110;
+  
+      // Find the current section
+      let currentSectionId = '';
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const element = sectionRefs.current[section.id];
+        if (element && element.offsetTop <= scrollPosition) {
+          currentSectionId = section.id;
+          break;
+        }
+      }
+      
+      if (currentSectionId && currentSectionId !== activeSection) {
+          setActiveSection(currentSectionId);
+      }
     };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [sections, activeSection]); // Rerun effect if sections or activeSection changes
 
   /**

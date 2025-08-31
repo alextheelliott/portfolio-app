@@ -24,10 +24,7 @@ const theme = createTheme({
     h2: {
       fontWeight: 700,
     },
-  },
-  typography: {
-    fontFamily: 'Inter, sans-serif',
-    h2: {
+    h3: {
       fontWeight: 600,
     },
   },

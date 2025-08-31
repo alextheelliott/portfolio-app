@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState, useRef } from "react";
 import { Stack } from '@mui/material'
 import { KeyboardDoubleArrowDown } from '@mui/icons-material';
 
-import FaultyTerminal from '../bits/FaultyTerminal/FaultyTerminal';
+// import FaultyTerminal from '../bits/FaultyTerminal/FaultyTerminal';
 import Dither from '../bits/Dither/Dither';
 import TextType from '../bits/TextType/TextType';
 
@@ -29,9 +29,9 @@ export default function Header({isMobile}) {
   }, []);
 
   // Memoize terminal so React doesn’t rebuild it on scroll
-  const background1 = useMemo(() => 
-    <FaultyTerminal scale={1.8} tint={'#009cd5'} mouseStrength={1.5} noiseAmp={0.6} timeScale={0.6} gridMul={[1.5,1]}/>,
-  []);
+  // const background1 = useMemo(() => 
+  //   <FaultyTerminal scale={1.8} tint={'#009cd5'} mouseStrength={1.5} noiseAmp={0.6} timeScale={0.6} gridMul={[1.5,1]}/>,
+  // []);
   const background2 = useMemo(() => 
     <Dither waveSpeed={0.02} waveColor={[0, 0.5, 1]} mouseRadius={0.6}/>, 
   []);
@@ -70,7 +70,7 @@ export default function Header({isMobile}) {
           justifyContent: "center",
         }}
       >
-        {1 === 0 ? background1 : background2}
+        {background2}
         <div
           style={{
             position: "absolute",
