@@ -1,0 +1,77 @@
+import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { GitHub, LinkedIn } from '@mui/icons-material';
+
+import Header from '../components/Header';
+// import { ExpEntry } from '../components/ExpEntry';
+// import { ProjectEntry } from '../components/ProjectEntry';
+
+import resume from "../resources/Resume 10_07_2025 - Google Docs.pdf";
+import headshot from "../resources/Elliott_Alex.png";
+// import engine1 from "../resources/engine1.png";
+// import engine2 from "../resources/engine2.gif";
+// import robocan1 from "../resources/robocan1.JPG";
+// import robocan2 from "../resources/robocan2.png";
+// import sunnyview1 from "../resources/sunnyview1.png";
+// import sunnyview2 from "../resources/sunnyview2.png";
+// import sunnyview3 from "../resources/sunnyview3.png";
+// import magna from "../resources/magna.webp";
+// import amegroup from "../resources/amegroup.png";
+// import lra3d from "../resources/lrad3d.png";
+import { aboutMe, experience, projects } from '../resources/text';
+
+export function MobileLayout({sections}) {
+  const ContentSection = ({ id, title, children, border }) => (
+    <Box id={id} sx={{ minHeight: '50vh', maxWidth: '70ch', pt: 8, pb: 8, borderBottom: border?'1px solid #eee':'' }}>
+      <Typography variant="h3" gutterBottom>
+        {title}
+      </Typography>
+      {children}
+    </Box>
+  );
+
+  return (
+    <div style={{backgroundColor: 'background.default'}}>
+      <Header isMobile={true}/>
+      <main>
+        <Container maxWidth="sm">
+          <ContentSection id="abt" title="About Me">
+            <Stack spacing={2}>
+              <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>
+              <img src={headshot} alt={'Portrait'} style={{objectFit: 'cover'}}/>
+            </Stack>
+          </ContentSection>
+          <ContentSection id="res" title="Resume">
+            <div style={{width: '100%', height: '500px'}}>
+              <iframe src={resume} title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
+            </div>
+          </ContentSection>
+          <ContentSection id="exp" title="Experience">
+            <Typography variant="body1" sx={{ maxWidth: '70ch' }}>
+              To see more about my projects and experience visit this site on desktop!
+            </Typography>
+          </ContentSection>
+        </Container>
+        <footer style={{height: 'fit-content'}}>
+          <div style={{width: '100%', height: '100%', paddingBlock: '10px', alignContent: 'center', color: '#fff', backgroundColor: '#00004e'}}>
+            <Stack alignItems={'center'}>
+              <Typography variant="body2">AlexJaElliott@gmail.com</Typography>
+              <Typography variant="body2">+1 (647) 201-9466</Typography>
+              <Stack direction='row' spacing={1} alignItems={'center'}>
+                <GitHub fontSize='body2'/>
+                <Typography variant="body2">
+                  <Link href={'https://github.com/alextheelliott'} color="inherit">github.com/alextheelliott</Link>
+                </Typography>
+              </Stack>
+              <Stack direction='row' spacing={1} alignItems={'center'}>
+                <LinkedIn fontSize='body2' style={{marginRight: 4}}/>
+                <Typography variant="body2">
+                  <Link href={'https://linkedin.com/in/alexjaelliott'} color="inherit">linkedin.com/in/alexjaelliott</Link>
+                </Typography>
+              </Stack>
+            </Stack>
+          </div>
+        </footer>
+      </main>
+    </div>
+  )
+}
