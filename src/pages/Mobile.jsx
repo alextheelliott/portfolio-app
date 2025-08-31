@@ -5,8 +5,7 @@ import Header from '../components/Header';
 // import { ExpEntry } from '../components/ExpEntry';
 // import { ProjectEntry } from '../components/ProjectEntry';
 
-import resume from "../resources/Resume 10_07_2025 - Google Docs.pdf";
-import headshot from "../resources/Elliott_Alex.png";
+// import headshot from "../resources/Elliott_Alex.png";
 // import engine1 from "../resources/engine1.png";
 // import engine2 from "../resources/engine2.gif";
 // import robocan1 from "../resources/robocan1.JPG";
@@ -17,7 +16,7 @@ import headshot from "../resources/Elliott_Alex.png";
 // import magna from "../resources/magna.webp";
 // import amegroup from "../resources/amegroup.png";
 // import lra3d from "../resources/lrad3d.png";
-import { aboutMe, experience, projects } from '../resources/text';
+import { aboutMe, experience, projects } from '../text';
 
 export function MobileLayout({sections}) {
   const ContentSection = ({ id, title, children, border }) => (
@@ -37,12 +36,12 @@ export function MobileLayout({sections}) {
           <ContentSection id="abt" title="About Me">
             <Stack spacing={2}>
               <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>
-              <img src={headshot} alt={'Portrait'} style={{objectFit: 'cover'}}/>
+              <img src='/resources/Elliott_Alex.png' alt={'Portrait'} style={{objectFit: 'cover'}}/>
             </Stack>
           </ContentSection>
           <ContentSection id="res" title="Resume">
             <div style={{width: '100%', height: '500px'}}>
-              <iframe src={resume} title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
+              <iframe src='/Resume 10_07_2025 - Google Docs.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
             </div>
           </ContentSection>
           <ContentSection id="exp" title="Experience">

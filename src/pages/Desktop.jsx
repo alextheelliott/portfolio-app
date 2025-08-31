@@ -6,19 +6,7 @@ import Header from '../components/Header';
 import { ExpEntry } from '../components/ExpEntry';
 import { ProjectEntry } from '../components/ProjectEntry';
 
-import resume from "../resources/Resume 10_07_2025 - Google Docs.pdf";
-import headshot from "../resources/Elliott_Alex.png";
-import engine1 from "../resources/engine1.png";
-import engine2 from "../resources/engine2.gif";
-import robocan1 from "../resources/robocan1.JPG";
-import robocan2 from "../resources/robocan2.png";
-import sunnyview1 from "../resources/sunnyview1.png";
-import sunnyview2 from "../resources/sunnyview2.png";
-import sunnyview3 from "../resources/sunnyview3.png";
-import magna from "../resources/magna.webp";
-import amegroup from "../resources/amegroup.png";
-import lra3d from "../resources/lrad3d.png";
-import { aboutMe, experience, projects } from '../resources/text';
+import { aboutMe, experience, projects } from '../text';
 
 export function DesktopLayout({sections}) {
   // Helper component for creating dummy content sections
@@ -44,13 +32,13 @@ export function DesktopLayout({sections}) {
       </Stack>
       <Grid container spacing={2} style={{paddingBottom: 64}}>
         <Grid size={4}>
-          <img src={magna} alt={'Magna Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
+          <img src="/resources/magna.webp" alt={'Magna Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
         </Grid>
         <Grid size={4}>
-          <img src={amegroup} alt={'AME Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
+          <img src="/resources/amegroup.png" alt={'AME Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
         </Grid>
         <Grid size={4}>
-          <img src={lra3d} alt={'LRA3D Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
+          <img src="/resources/lrad3d.png" alt={'LRA3D Logo'} style={{height: 40, width: '100%', objectFit: 'contain'}}/>
         </Grid>
       </Grid>
     </Stack>
@@ -63,7 +51,7 @@ export function DesktopLayout({sections}) {
         <AnchorNavigation sections={sections}/>
         <Container maxWidth="md">
           <Box sx={{ ml: '60px', mr: '60px' }}> {/* Add left margin to avoid content overlapping with the nav */}
-            <ContentSectionWImg id="abt" title="About Me" img={headshot}>
+            <ContentSectionWImg id="abt" title="About Me" img="/resources/Elliott_Alex.png">
               <Stack direction="row" spacing={2}>
                 <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>
               </Stack>
@@ -73,22 +61,22 @@ export function DesktopLayout({sections}) {
                 <ProjectEntry data={projects.robocan}>
                   <Grid container spacing={2}>
                     <Grid size={8}>
-                      <img src={robocan2} alt={'robocan2'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
+                      <img src="/resources/robocan2.png" alt={'robocan2'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
                     </Grid>
                     <Grid size={4}>
-                      <img src={robocan1} alt={'robocan1'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
+                      <img src="/resources/robocan1.JPG" alt={'robocan1'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
                     </Grid>
                   </Grid>
                 </ProjectEntry>
                 <ProjectEntry data={projects.sunnyview}>
                   <Grid container spacing={2}>
                     <Grid size={7}>
-                      <img src={sunnyview2} alt={'sunnyview2'} style={{height: 340, width: '100%', objectFit: 'cover'}}/>
+                      <img src="/resources/sunnyview2.png" alt={'sunnyview2'} style={{height: 340, width: '100%', objectFit: 'cover'}}/>
                     </Grid>
                     <Grid size={5}>
                       <Stack spacing={2}>
-                        <img src={sunnyview3} alt={'sunnyview3'} style={{height: 110, width: '100%', objectFit: 'cover'}}/>
-                        <img src={sunnyview1} alt={'sunnyview1'} style={{height: 214, width: '100%', objectFit: 'cover'}}/>
+                        <img src="/resources/sunnyview3.png" alt={'sunnyview3'} style={{height: 110, width: '100%', objectFit: 'cover'}}/>
+                        <img src="/resources/sunnyview1.png" alt={'sunnyview1'} style={{height: 214, width: '100%', objectFit: 'cover'}}/>
                       </Stack>
                     </Grid>
                   </Grid>
@@ -96,10 +84,10 @@ export function DesktopLayout({sections}) {
                 <ProjectEntry data={projects.i6engine}>
                   <Grid container spacing={2}>
                     <Grid size={4}>
-                      <img src={engine1} alt={'engine1'} style={{height: 300, width: '100%', objectFit: 'cover'}}/>
+                      <img src="../resources/engine1.png" alt={'engine1'} style={{height: 300, width: '100%', objectFit: 'cover'}}/>
                     </Grid>
                     <Grid size={8}>
-                      <img src={engine2} alt={'engine2'} style={{height: 300, width: '100%', objectFit: 'cover'}}/>
+                      <img src="../resources/engine2.gif" alt={'engine2'} style={{height: 300, width: '100%', objectFit: 'cover'}}/>
                     </Grid>
                   </Grid>
                 </ProjectEntry>
@@ -122,7 +110,7 @@ export function DesktopLayout({sections}) {
             </ContentSection>
             <ContentSection id="res" title="Resume">
               <div style={{width: '100%', height: '500px'}}>
-                <iframe src={resume} title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
+                <iframe src='/Resume 10_07_2025 - Google Docs.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
               </div>
             </ContentSection>
           </Box>
