@@ -34,7 +34,7 @@ export default function Header({isMobile}) {
   // []);
   const background2 = useMemo(() => 
     <Dither waveSpeed={0.02} waveColor={[0, 0.5, 1]} enableMouseInteraction={!isMobile} mouseRadius={0.6}/>, 
-  []);
+  [isMobile]);
   const title = useMemo(() => 
     <TextType text={['Alexander J. Elliott', 'Portfolio & Experience']} cursorCharacter="▎" pauseDuration={4000}/>, 
   []);
