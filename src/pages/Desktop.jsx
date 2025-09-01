@@ -11,7 +11,7 @@ import { aboutMe, experience, projects } from '../text';
 export function DesktopLayout({sections}) {
   // Helper component for creating dummy content sections
   const ContentSection = ({ id, title, children, border }) => (
-    <Box id={id} sx={{ minHeight: '50vh', maxWidth: '70ch', pt: 8, pb: 8, borderBottom: border?'1px solid #eee':'' }}>
+    <Box id={id} sx={{ minHeight: '50vh', width: '100%', pt: 8, pb: 8, borderBottom: border?'1px solid #eee':'' }}>
       <Typography variant="h2" gutterBottom>
         {title}
       </Typography>
@@ -28,7 +28,7 @@ export function DesktopLayout({sections}) {
           </Typography>
           {children}
         </Box>
-        <img src={img} alt={'Portrait'} style={{width: 250, paddingTop: 64, objectFit: 'cover'}}/>
+        <img src={img} alt={'Portrait'} style={{width: 250, height: 350, paddingTop: 64, objectFit: 'cover'}}/>
       </Stack>
       <Grid container spacing={2} style={{paddingBottom: 64}}>
         <Grid size={4}>
@@ -50,7 +50,7 @@ export function DesktopLayout({sections}) {
       <main>
         <AnchorNavigation sections={sections}/>
         <Container maxWidth="md">
-          <Box sx={{ ml: '60px', mr: '60px' }}> {/* Add left margin to avoid content overlapping with the nav */}
+          <Box sx={{ ml: '30px', mr: '30px' }}> {/* Add left margin to avoid content overlapping with the nav */}
             <ContentSectionWImg id="abt" title="About Me" img="/resources/Elliott_Alex.png">
               <Stack direction="row" spacing={2}>
                 <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>

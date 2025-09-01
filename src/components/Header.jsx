@@ -33,7 +33,7 @@ export default function Header({isMobile}) {
   //   <FaultyTerminal scale={1.8} tint={'#009cd5'} mouseStrength={1.5} noiseAmp={0.6} timeScale={0.6} gridMul={[1.5,1]}/>,
   // []);
   const background2 = useMemo(() => 
-    <Dither waveSpeed={0.02} waveColor={[0, 0.5, 1]} mouseRadius={0.6}/>, 
+    <Dither waveSpeed={0.02} waveColor={[0, 0.5, 1]} enableMouseInteraction={!isMobile} mouseRadius={0.6}/>, 
   []);
   const title = useMemo(() => 
     <TextType text={['Alexander J. Elliott', 'Portfolio & Experience']} cursorCharacter="▎" pauseDuration={4000}/>, 
@@ -99,6 +99,23 @@ export default function Header({isMobile}) {
           <KeyboardDoubleArrowDown />
           Scroll
         </Stack>
+        { !isMobile &&
+          <Stack
+            direction='row'
+            gap={1}
+            style={{
+              position: "absolute",
+              top: "10px",
+              color: "white",
+              fontSize: "1.0rem",
+              fontWeight: "lighter",
+              pointerEvents: "none", // so clicks pass through if needed
+              alignItems: 'center',
+            }}
+          >
+            * For best experience enable browser hardware acceleration
+          </Stack>
+        }
       </div>
     </header>
   );
