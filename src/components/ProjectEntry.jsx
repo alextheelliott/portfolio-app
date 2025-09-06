@@ -28,8 +28,8 @@ export function ProjectEntry({children, data}) {
         }
       </Stack>
       {
-        data.desc.map((text) => 
-          <Typography>{text}</Typography>
+        data.desc.map((text, index) => 
+          <Typography key={index}>{text}</Typography>
         )
       }
       { children }

@@ -18,7 +18,9 @@ export function ExpEntry({data}) {
         </Stack>
       </Stack>
       {
-        data.desc.map((text) => <Typography variant="body1">{text}</Typography>)
+        data.desc.map((text, index) => 
+          <Typography key={index} variant="body1">{text}</Typography>
+        )
       }
     </Stack>
   )

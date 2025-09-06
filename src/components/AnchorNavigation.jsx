@@ -76,14 +76,14 @@ export default function AnchorNavigation({ sections }) {
           return (
             <Box component="li" key={section.id} sx={{ position: 'relative', my: 1 }}>
               {/* This is the visual indicator for the active link */}
-              {isActive && (
+              {(
                 <Box
                   sx={{
                     position: 'absolute',
                     left: '-18px', // Position over the main borderLeft
                     top: '50%',
-                    transform: 'translateY(-50%)',
-                    width: '4px',
+                    transform: isActive ? 'translateY(-50%)' : '',
+                    width: isActive ? '4px' : '0px',
                     height: '24px', // Taller than the text for emphasis
                     backgroundColor: 'primary.main',
                     borderRadius: '2px',
