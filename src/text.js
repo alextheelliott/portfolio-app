@@ -99,6 +99,21 @@ export const experience = {
   }
 }
 export const projects = {
+  spiceChanger: {
+    project: 'Spice Changer',
+    extra: 'MECH 423 Final Project',
+    link: 'https://github.com/alextheelliott/SpiceChanger',
+    date: [
+      'Jan',
+      'Feb 2026'
+    ],
+    desc: [
+      'Created an automated kitchen spice rack to aid chef\'s in the kitchen',
+      'Designed a Windows Form C# UI to implement fast and reliable controls, including voice control and advanced restocking features',
+      'Implemented controls on an MSP430 chip on a custom PCB to drive the stepper motor to push and pull the spices, and a DC motor to align the correctly requested spice',
+      'IR sensor and limit switch were added to confirm the retrieval state of the spices and the zero location of the tray, respectively'
+    ]
+  },
   robocan: {
     project: 'RoboCan',
     extra: 'TOHacks CockRoachDB Award Winner',
@@ -117,7 +132,7 @@ export const projects = {
     extra: '',
     link: '',
     date: [
-      'Mar 2021',
+      'Mar',
       'May 2021'
     ],
     desc: [
