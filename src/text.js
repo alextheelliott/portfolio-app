@@ -114,6 +114,16 @@ export const projects = {
       'IR sensor and limit switch were added to confirm the retrieval state of the spices and the zero location of the tray, respectively'
     ]
   },
+  designComp: {
+    project: 'UBC Senior Engineering Design Competition',
+    extra: '',
+    link: '',
+    date: 'Mar 2026',
+    desc: [
+      'Competed in a hackathon-style robotics challenge to span an increasing gap using VEX EDR parts',
+      'Created a winch hook system using a catapult to launch a grappling hook to the far end of the table'
+    ]
+  },
   robocan: {
     project: 'RoboCan',
     extra: 'TOHacks CockRoachDB Award Winner',
