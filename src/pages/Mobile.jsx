@@ -28,7 +28,7 @@ export function MobileLayout({sections}) {
           </ContentSection>
           <ContentSection id="res" title="Resume">
             <div style={{width: '100%', height: '500px'}}>
-              <iframe src='/Resume 10_07_2025 - Google Docs.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
+              <iframe src='/Alex J Elliott Resume.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
             </div>
           </ContentSection>
           <ContentSection id="exp" title="Experience">

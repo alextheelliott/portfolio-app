@@ -107,6 +107,34 @@ export function DesktopLayout({sections}) {
                     </Grid>
                   </Grid>
                 </ProjectEntry>
+                <ProjectEntry data={projects.capstone}>
+                  <Stack spacing={2}>
+                    <Grid container spacing={2}>
+                      <Grid size={4} style={{zIndex: 3}}>
+                        <GlareCard style={{alignContent: 'center', height: 350}}>
+                          <img src="/resources/capstone3.gif" alt={'capstone2'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                      </Grid>
+                      <Grid size={8} style={{zIndex: 4}}>
+                        <GlareCard style={{alignContent: 'center', height: 350}}>
+                          <img src="/resources/capstone1.jpeg" alt={'capstone1'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                      </Grid>
+                    </Grid>
+                    <Grid container spacing={2}>
+                      <Grid size={6} style={{zIndex: 2}}>
+                        <GlareCard style={{alignContent: 'center', height: 260}}>
+                          <img src="/resources/capstone4.png" alt={'capstone2'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                      </Grid>
+                      <Grid size={6} style={{zIndex: 1}}>
+                        <GlareCard style={{alignContent: 'center', height: 260}}>
+                          <img src="/resources/capstone3.jpg" alt={'capstone1'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                      </Grid>
+                    </Grid>
+                  </Stack>
+                </ProjectEntry>
                 <ProjectEntry data={projects.robocan}>
                   <Grid container spacing={2}>
                     <Grid size={8} style={{zIndex: 4}}>
@@ -173,7 +201,7 @@ export function DesktopLayout({sections}) {
             </ContentSection>
             <ContentSection id="res" title="Resume">
               <div style={{width: '100%', height: '500px'}}>
-                <iframe src='/Resume 10_07_2025 - Google Docs.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
+                <iframe src='/Alex J Elliott Resume.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
               </div>
             </ContentSection>
           </Box>
