@@ -112,7 +112,7 @@ export function DesktopLayout({sections}) {
                     <Grid container spacing={2}>
                       <Grid size={4} style={{zIndex: 3}}>
                         <GlareCard style={{alignContent: 'center', height: 350}}>
-                          <img src="/resources/capstone3.gif" alt={'capstone2'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
+                          <img src="../resources/capstone2.gif" alt={'capstone2'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
                         </GlareCard>
                       </Grid>
                       <Grid size={8} style={{zIndex: 4}}>
@@ -124,12 +124,12 @@ export function DesktopLayout({sections}) {
                     <Grid container spacing={2}>
                       <Grid size={6} style={{zIndex: 2}}>
                         <GlareCard style={{alignContent: 'center', height: 260}}>
-                          <img src="/resources/capstone4.png" alt={'capstone2'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                          <img src="/resources/capstone4.png" alt={'capstone4'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
                         </GlareCard>
                       </Grid>
                       <Grid size={6} style={{zIndex: 1}}>
                         <GlareCard style={{alignContent: 'center', height: 260}}>
-                          <img src="/resources/capstone3.jpg" alt={'capstone1'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                          <img src="/resources/capstone3.jpg" alt={'capstone3'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
                         </GlareCard>
                       </Grid>
                     </Grid>
