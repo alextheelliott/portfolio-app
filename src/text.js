@@ -1,4 +1,4 @@
-export const aboutMe = `Hello, I'm Alex. I'm 22 years old and currently studying Mechatronics Engineering (BASc) at the University of British Columbia in Vancouver. I have experience with building consulting and automotive engineering, working at AME Group and Magna International respectively. I am also a member of UBC's Formula Electric team and was a member of UBC's Uncrewed Aircraft Systems team for 2 years. I am a FIRST Robotics and SHAD alumni. I'd like to research and explore the fields of Machine Learning and Robotics as I grow and explore my career. I am excited to explore new topics and delve into exciting projects.`
+export const aboutMe = `Hello, I'm Alex. I'm 23 years old and have recently finished my Mechatronics Engineering (BASc) Degree at the University of British Columbia in Vancouver. I have experience with building consulting and automotive engineering, working at AME Group and Magna International respectively. I was also a member of UBC's Formula Electric team for 1.5 years and UBC's Uncrewed Aircraft Systems team for 2 years. I am a FIRST Robotics and SHAD alumni. I'd like to research and explore the fields of Machine Learning and Robotics as I grow and explore my career. I am excited to explore new topics and delve into exciting projects.`
 export const experience = {
   magna: {
     company: 'Magna International',
@@ -101,7 +101,7 @@ export const experience = {
 export const projects = {
   spiceChanger: {
     project: 'Spice Changer',
-    extra: 'MECH 423 Final Project',
+    extra: 'UBC MECH 423 Final Project',
     link: 'https://github.com/alextheelliott/SpiceChanger',
     date: [
       'Jan',
@@ -114,11 +114,28 @@ export const projects = {
       'IR sensor and limit switch were added to confirm the retrieval state of the spices and the zero location of the tray, respectively'
     ]
   },
+  capstone: {
+    project: 'Litter Collecting Drone',
+    extra: 'UBC Capstone Project',
+    link: '',
+    date: [
+      'Sep 2025',
+      'Apr 2026'
+    ],
+    desc: [
+      'Developed a drone to locate and retrieve litter items for use on hiking trails and in dangerous terrain',
+      'Designed and manufactured a custom quadcopter drone, with each motor canted at 10 degrees to negate downdraft effects on the litter',
+      'Programmed the drone using a PixHawk flight controller with Mission Plannar firmware, using GPS enabled loiter mode',
+      'Implemented a YOLOv8 model trained on the Trash Annotated in Context (TACO) dataset onto a Raspberri Pi Zero 2 W'
+    ]
+  },
   designComp: {
     project: 'UBC Senior Engineering Design Competition',
     extra: '',
     link: '',
-    date: 'Mar 2026',
+    date: [
+      'Mar 2026'
+    ],
     desc: [
       'Competed in a hackathon-style robotics challenge to span an increasing gap using VEX EDR parts',
       'Created a winch hook system using a catapult to launch a grappling hook to the far end of the table'

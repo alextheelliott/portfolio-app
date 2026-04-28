@@ -107,6 +107,20 @@ export function DesktopLayout({sections}) {
                     </Grid>
                   </Grid>
                 </ProjectEntry>
+                <ProjectEntry data={projects.capstone}>
+                  <Grid container spacing={2}>
+                    <Grid size={4} style={{zIndex: 3}}>
+                      <GlareCard style={{alignContent: 'center', height: 350}}>
+                        <img src="/resources/capstone3.gif" alt={'capstone2'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
+                      </GlareCard>
+                    </Grid>
+                    <Grid size={8} style={{zIndex: 4}}>
+                      <GlareCard style={{alignContent: 'center', height: 350}}>
+                        <img src="/resources/capstone1.jpeg" alt={'capstone1'} style={{height: 350, width: '100%', objectFit: 'cover'}}/>
+                      </GlareCard>
+                    </Grid>
+                  </Grid>
+                </ProjectEntry>
                 <ProjectEntry data={projects.robocan}>
                   <Grid container spacing={2}>
                     <Grid size={8} style={{zIndex: 4}}>
