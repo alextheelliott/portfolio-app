@@ -27,10 +27,16 @@ export function ProjectEntry({children, data}) {
           </Stack>
         }
       </Stack>
-      {
+      { data.desc.length > 0 &&
         data.desc.map((text, index) => 
           <Typography key={index}>{text}</Typography>
         )
+      }
+      { data.keySkills.length > 0 &&
+        <Stack direction="row" spacing={1}>
+          <Typography sx={{ minWidth: '80px' }} fontWeight="fontWeightBold">Key Skills:</Typography>
+          <Typography>{data.keySkills.join(', ')}</Typography>
+        </Stack>
       }
       { children }
     </Stack>

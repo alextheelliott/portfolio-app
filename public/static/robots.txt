@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Plain-text, LLM-readable version of this site's content:
+# https://www.alexjelliott.ca/llms.txt
+
+Sitemap: https://www.alexjelliott.ca/sitemap.xml

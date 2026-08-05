@@ -3,7 +3,7 @@ import { GitHub, LinkedIn } from '@mui/icons-material';
 
 import Header from '../components/Header';
 
-import { aboutMe } from '../text';
+import { aboutMe1, aboutMe2 } from '../text';
 
 export function MobileLayout({sections}) {
   const ContentSection = ({ id, title, children, border }) => (
@@ -21,8 +21,9 @@ export function MobileLayout({sections}) {
       <main>
         <Container maxWidth="sm">
           <ContentSection id="abt" title="About Me">
-            <Stack spacing={2}>
-              <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>
+            <Stack direction="column" spacing={2}>
+              <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe1}</Typography>
+              <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe2}</Typography>
               <img src='/resources/Elliott_Alex.png' alt={'Portrait'} style={{objectFit: 'cover'}}/>
             </Stack>
           </ContentSection>
