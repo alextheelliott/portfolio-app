@@ -8,7 +8,7 @@ import Header from '../components/Header';
 import { ExpEntry } from '../components/ExpEntry';
 import { ProjectEntry } from '../components/ProjectEntry';
 
-import { aboutMe, experience, projects } from '../text';
+import { aboutMe1, aboutMe2, experience, projects } from '../text';
 
 export function DesktopLayout({sections}) {
   // Helper component for creating dummy content sections
@@ -78,35 +78,13 @@ export function DesktopLayout({sections}) {
         <Container maxWidth="md">
           <Box sx={{ ml: '30px', mr: '30px' }}> {/* Add left margin to avoid content overlapping with the nav */}
             <ContentSectionWImg id="abt" title="About Me" img="/resources/Elliott_Alex.png">
-              <Stack direction="row" spacing={2}>
-                <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe}</Typography>
+              <Stack direction="column" spacing={2}>
+                <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe1}</Typography>
+                <Typography variant="body1" sx={{ maxWidth: '70ch' }}>{aboutMe2}</Typography>
               </Stack>
             </ContentSectionWImg>
             <ContentSection id="prj" title="Projects" border={true}>
               <Stack spacing={2}>
-                <ProjectEntry data={projects.spiceChanger}>
-                  <Grid container spacing={2}>
-                    <Grid size={8} style={{zIndex: 4}}>
-                      <Card style={{height: '100%'}}>
-                        <iframe 
-                          src="https://www.youtube.com/embed/DZng8hrZx-s" 
-                          frameborder="0" allow="fullscreen;" title="Spice Changer Demo Video"
-                          style={{height: '100%', width: '100%', objectFit: 'cover'}}
-                        />
-                      </Card>
-                    </Grid>
-                    <Grid size={4} style={{zIndex: 3}}>
-                      <Stack spacing={2}>
-                        <GlareCard style={{alignContent: 'center', height: 250}}>
-                          <img src="/resources/sc3.png" alt={'spiceChanger2'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
-                        </GlareCard>
-                        <GlareCard style={{alignContent: 'center', height: 250}}>
-                          <img src="/resources/sc4.png" alt={'spiceChanger1'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
-                        </GlareCard>
-                      </Stack>
-                    </Grid>
-                  </Grid>
-                </ProjectEntry>
                 <ProjectEntry data={projects.capstone}>
                   <Stack spacing={2}>
                     <Grid container spacing={2}>
@@ -134,6 +112,29 @@ export function DesktopLayout({sections}) {
                       </Grid>
                     </Grid>
                   </Stack>
+                </ProjectEntry>
+                <ProjectEntry data={projects.spiceChanger}>
+                  <Grid container spacing={2}>
+                    <Grid size={8} style={{zIndex: 4}}>
+                      <Card style={{height: '100%'}}>
+                        <iframe 
+                          src="https://www.youtube.com/embed/DZng8hrZx-s" 
+                          frameborder="0" allow="fullscreen;" title="Spice Changer Demo Video"
+                          style={{height: '100%', width: '100%', objectFit: 'cover'}}
+                        />
+                      </Card>
+                    </Grid>
+                    <Grid size={4} style={{zIndex: 3}}>
+                      <Stack spacing={2}>
+                        <GlareCard style={{alignContent: 'center', height: 250}}>
+                          <img src="/resources/sc3.png" alt={'spiceChanger2'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                        <GlareCard style={{alignContent: 'center', height: 250}}>
+                          <img src="/resources/sc4.png" alt={'spiceChanger1'} style={{height: 250, width: '100%', objectFit: 'cover'}}/>
+                        </GlareCard>
+                      </Stack>
+                    </Grid>
+                  </Grid>
                 </ProjectEntry>
                 <ProjectEntry data={projects.robocan}>
                   <Grid container spacing={2}>
