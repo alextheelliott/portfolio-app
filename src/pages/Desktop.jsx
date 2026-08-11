@@ -1,4 +1,6 @@
-import { Box, Card, Container, Divider, Grid, Link, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
+
+import { Box, Card, Container, Divider, Grid, Link, Stack, Typography, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 
 import GlareHover from '../bits/GlareHover/GlareHover';
@@ -61,6 +63,12 @@ export function DesktopLayout({sections}) {
       </GlareHover>
     </Card>
   );
+
+  const [resumeShown, setResumeShown] = useState("robotics");
+
+  const handleResumeChange = (event, newResume) => {
+    if (newResume !== null) setResumeShown(newResume);
+  }
 
   return (
     <div style={{backgroundColor: 'background.default', minWidth: '900px'}}>
@@ -201,9 +209,26 @@ export function DesktopLayout({sections}) {
               </Stack>
             </ContentSection>
             <ContentSection id="res" title="Resume">
-              <div style={{width: '100%', height: '500px'}}>
-                <iframe src='/Alex J Elliott Resume.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
-              </div>
+              <Stack spacing={2}>
+                <Box display="flex" justifyContent="center" style={{width: '100%', }}>
+                  <ToggleButtonGroup
+                    value={resumeShown}
+                    exclusive
+                    onChange={handleResumeChange}
+                    style={{}}
+                  >
+                    <ToggleButton value='mechanical'>Mechanical</ToggleButton>
+                    <ToggleButton value='robotics'>Robotics</ToggleButton>
+                    <ToggleButton value='software'>Software</ToggleButton>
+                  </ToggleButtonGroup>
+                </Box>
+                <div style={{width: '100%', height: '500px'}}>
+                  <iframe 
+                    src={resumeShown === 'mechanical' ? '/Resume Mechanical.pdf' : resumeShown === 'robotics' ? '/Resume Robotics.pdf' : '/Resume Software.pdf'}
+                    title='resume' width={'100%'} height={500} style={{border: 'none'}}
+                  ></iframe>
+                </div>
+              </Stack>
             </ContentSection>
           </Box>
         </Container>
