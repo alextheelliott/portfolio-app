@@ -1,4 +1,6 @@
-import { Box, Container, Link, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
+
+import { Box, Container, Link, Stack, Typography, ToggleButtonGroup, ToggleButton } from '@mui/material';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 
 import Header from '../components/Header';
@@ -15,6 +17,12 @@ export function MobileLayout({sections}) {
     </Box>
   );
 
+  const [resumeShown, setResumeShown] = useState("robotics");
+
+  const handleResumeChange = (event, newResume) => {
+    if (newResume !== null) setResumeShown(newResume);
+  }
+
   return (
     <div style={{backgroundColor: 'background.default'}}>
       <Header isMobile={true}/>
@@ -28,9 +36,26 @@ export function MobileLayout({sections}) {
             </Stack>
           </ContentSection>
           <ContentSection id="res" title="Resume">
-            <div style={{width: '100%', height: '500px'}}>
-              <iframe src='/Alex J Elliott Resume.pdf' title='resume' width={'100%'} height={500} style={{border: 'none'}}></iframe>
-            </div>
+            <Stack spacing={2}>
+              <Box display="flex" justifyContent="center" style={{width: '100%', }}>
+                <ToggleButtonGroup
+                  value={resumeShown}
+                  exclusive
+                  onChange={handleResumeChange}
+                  style={{}}
+                >
+                  <ToggleButton value='mechanical'>Mechanical</ToggleButton>
+                  <ToggleButton value='robotics'>Robotics</ToggleButton>
+                  <ToggleButton value='software'>Software</ToggleButton>
+                </ToggleButtonGroup>
+              </Box>
+              <div style={{width: '100%', height: '500px'}}>
+                <iframe 
+                  src={resumeShown === 'mechanical' ? '/Resume Mechanical.pdf' : resumeShown === 'robotics' ? '/Resume Robotics.pdf' : '/Resume Software.pdf'}
+                  title='resume' width={'100%'} height={500} style={{border: 'none'}}
+                ></iframe>
+              </div>
+            </Stack>
           </ContentSection>
           <ContentSection id="exp" title="Experience">
             <Typography variant="body1" sx={{ maxWidth: '70ch' }}>
