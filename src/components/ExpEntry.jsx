@@ -1,12 +1,21 @@
+import { YouTube } from '@mui/icons-material';
 import { Link, Stack, Typography } from '@mui/material';
 
-export function ExpEntry({data}) {
+export function ExpEntry({children, data}) {
   return (
     <Stack spacing={1}>
       <Stack direction="row" justifyContent='space-between' alignItems='flex-end'>
         <Stack direction="row" spacing={1}>
           <Typography fontWeight="fontWeightBold" variant="h6" gutterBottom>
-            { data.link === '' ? data.company : <Link href={data.link} color="inherit">{data.company}</Link> }
+            { data.link === '' ? data.company : 
+              data.link.includes("youtu") ? 
+                <Stack direction='row' spacing={1} alignItems={'center'}>
+                  <YouTube/>
+                  <Link style={{marginLeft: 2}} href={data.link} color="inherit">{data.company}</Link> 
+                </Stack>
+              :
+                <Link href={data.link} color="inherit">{data.company}</Link> 
+            }
           </Typography>
           <Typography variant="h6" gutterBottom>-</Typography>
           <Typography variant="h6" gutterBottom>{data.role}</Typography>
@@ -28,6 +37,7 @@ export function ExpEntry({data}) {
           <Typography>{data.keySkills.join(', ')}</Typography>
         </Stack>
       }
+      { children }
     </Stack>
   )
 }

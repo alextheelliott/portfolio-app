@@ -205,7 +205,37 @@ export function DesktopLayout({sections}) {
               <Stack spacing={2}>
                 <ExpEntry data={experience.fe}/>
                 <ExpEntry data={experience.uas}/>
-                <ExpEntry data={experience.frc}/>
+                <ExpEntry data={experience.frc}>
+                  <Grid container spacing={2}>
+                    <Grid size={4}>
+                      <GlareCard style={{position: 'relative', alignContent: 'center', height: 260}}>
+                        <img src="/resources/frc1.png" alt={'frc1'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                        <Card style={{backgroundColor: '#eeeeeed5', position: 'absolute', 
+                          bottom: 8}}>
+                          <Typography variant="body1" fontWeight="bold" style={{marginBlock: 4, marginInline: 20}}>2018 - Rex</Typography>
+                        </Card>
+                      </GlareCard>
+                    </Grid>
+                    <Grid size={4}>
+                      <GlareCard style={{position: 'relative', alignContent: 'center', height: 260}}>
+                        <img src="/resources/frc2.png" alt={'frc2'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                        <Card style={{backgroundColor: '#eeeeeed5', position: 'absolute', 
+                          top: 8}}>
+                          <Typography variant="body1" fontWeight="bold" style={{marginBlock: 4, marginInline: 20}}>2019 - Mantis</Typography>
+                        </Card>
+                      </GlareCard>
+                    </Grid>
+                    <Grid size={4}>
+                      <GlareCard style={{position: 'relative', alignContent: 'center', height: 260}}>
+                        <img src="/resources/frc3.png" alt={'frc3'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                        <Card style={{backgroundColor: '#eeeeeed5', position: 'absolute', 
+                          bottom: 8}}>
+                          <Typography variant="body1" fontWeight="bold" style={{marginBlock: 4, marginInline: 20}}>2020 - Megalodon</Typography>
+                        </Card>
+                      </GlareCard>
+                    </Grid>
+                  </Grid>
+                </ExpEntry>
               </Stack>
             </ContentSection>
             <ContentSection id="res" title="Resume">
