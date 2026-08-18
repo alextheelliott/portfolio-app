@@ -108,12 +108,12 @@ export function DesktopLayout({sections}) {
                       </Grid>
                     </Grid>
                     <Grid container spacing={2}>
-                      <Grid size={6} style={{zIndex: 2}}>
+                      <Grid size={6} style={{zIndex: 1}}>
                         <GlareCard style={{alignContent: 'center', height: 260}}>
                           <img src="/resources/capstone4.png" alt={'capstone4'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
                         </GlareCard>
                       </Grid>
-                      <Grid size={6} style={{zIndex: 1}}>
+                      <Grid size={6} style={{zIndex: 2}}>
                         <GlareCard style={{alignContent: 'center', height: 260}}>
                           <img src="/resources/capstone3.jpg" alt={'capstone3'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
                         </GlareCard>
@@ -204,7 +204,20 @@ export function DesktopLayout({sections}) {
             <ContentSection id="tea" title="Teams" border={true}>
               <Stack spacing={2}>
                 <ExpEntry data={experience.fe}/>
-                <ExpEntry data={experience.uas}/>
+                <ExpEntry data={experience.uas}>
+                  <Grid container spacing={2}>
+                    <Grid size={7} style={{zIndex: 4}}>
+                      <GlareCard style={{alignContent: 'center', height: 260}}>
+                        <img src="/resources/uas1.JPG" alt={'uas1'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                      </GlareCard>
+                    </Grid>
+                    <Grid size={5} style={{zIndex: 3}}>
+                      <GlareCard style={{lignContent: 'center', height: 260}}>
+                        <img src="/resources/uas2.jpg" alt={'uas2'} style={{height: 260, width: '100%', objectFit: 'cover'}}/>
+                      </GlareCard>
+                    </Grid>
+                  </Grid>
+                </ExpEntry>
                 <ExpEntry data={experience.frc}>
                   <Grid container spacing={2}>
                     <Grid size={4}>
