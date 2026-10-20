@@ -64,7 +64,7 @@ export function DesktopLayout({sections}) {
     </Card>
   );
 
-  const [resumeShown, setResumeShown] = useState("robotics");
+  const [resumeShown, setResumeShown] = useState("tron");
 
   const handleResumeChange = (event, newResume) => {
     if (newResume !== null) setResumeShown(newResume);
@@ -260,14 +260,13 @@ export function DesktopLayout({sections}) {
                     onChange={handleResumeChange}
                     style={{}}
                   >
-                    <ToggleButton value='mechanical'>Mechanical</ToggleButton>
-                    <ToggleButton value='robotics'>Robotics</ToggleButton>
-                    <ToggleButton value='software'>Software</ToggleButton>
+                    <ToggleButton value='tron'>Mechatronics</ToggleButton>
+                    <ToggleButton value='mech'>Mechanical</ToggleButton>
                   </ToggleButtonGroup>
                 </Box>
                 <div style={{width: '100%', height: '500px'}}>
                   <iframe 
-                    src={resumeShown === 'mechanical' ? '/Resume Mechanical.pdf' : resumeShown === 'robotics' ? '/Resume Robotics.pdf' : '/Resume Software.pdf'}
+                    src={resumeShown === 'mech' ? '/Resume Mechanical.pdf' : '/Resume Mechatronics.pdf'}
                     title='resume' width={'100%'} height={500} style={{border: 'none'}}
                   ></iframe>
                 </div>
